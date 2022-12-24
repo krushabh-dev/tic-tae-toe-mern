@@ -10,6 +10,7 @@ function Board() {
     const arr = [...game];
     arr[index] = currPlayer?"X":"O";
     setGame(arr);
+    setCurrPlayer(!currPlayer);
   }
 
   return (
