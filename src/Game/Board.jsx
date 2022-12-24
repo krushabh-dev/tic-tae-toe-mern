@@ -37,10 +37,14 @@ function Board() {
     setCurrPlayer(!currPlayer);
   };
 
+  const handleReset = () =>{
+    setGame(Array(9).fill(null));
+  }
+
   return (
     <div className="Board">
       {isWinner ? (
-        <>{isWinner} Win Game</>
+        <>{isWinner} Win Game. <button onClick={handleReset}>Reset</button></>
       ) : (
         <>
           <div className="board-container">
