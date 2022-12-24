@@ -3,6 +3,15 @@ import Square from "./Square";
 
 function Board() {
   const [game, setGame] = useState(Array(9).fill(null));
+  const [currPlayer, setCurrPlayer] = (true);
+  //true represent the primary user and false represnent opponent
+
+  const handleClick = (index) =>{
+    const arr = [...game];
+    arr[index] = currPlayer?"X":"O";
+    setGame(arr);
+  }
+
   return (
     <div className="Board">
       <div className="board-container">
