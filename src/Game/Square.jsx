@@ -4,6 +4,7 @@ function Square(props) {
   return (
     <div
       className="square"
+      onClick={props.onClick}
       style={{
         border: "1px solid",
         height: 100,
