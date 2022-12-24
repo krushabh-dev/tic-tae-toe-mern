@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Square from './Square'
 
 function Board() {
+const [game, setGame] = useState(Array(9).fill(null));
   return (
     <div className='Board'>
         <div className="board-container">
